@@ -1,4 +1,5 @@
 import React from "react";
+import Note from "./Note";
 
 function Background() {
   return (
@@ -10,6 +11,7 @@ function Background() {
         >
           Docs
         </h1>
+        <Note />
       </div>
     </>
   );

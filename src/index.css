@@ -10,6 +10,37 @@ body {
   width: 100%;
 }
 .bg {
-  background-color: #dcd6f7;
+  background-color: #99999b;
   height: 100vh;
+}
+.bgText {
+  font-size: 150px;
+  position: absolute;
+  top: 35%;
+  left: 36%;
+  color: #53515c;
+}
+.mainNote {
+  margin: 30px;
+  height: 250px;
+  width: 200px;
+  background-color: #515153;
+  position: absolute;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.footer {
+  height: 20%;
+  width: 100%;
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+}
+.head {
+  margin-left: 10%;
+  display: flex;
+  margin-top: 10%;
+}
+.icon {
+  margin-right: 10%;
 }
