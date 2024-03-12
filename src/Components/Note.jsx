@@ -1,13 +1,27 @@
 import React from "react";
+import { CiStickyNote } from "react-icons/ci";
+import { CiStar } from "react-icons/ci";
 
-function Note() {
+function Note({ data }) {
+  const count = data.star;
+  const stars = [];
+  for (let i = 0; i < count; i++) {
+    stars.push(<CiStar key={i} />);
+  }
+
   return (
     <div className="mainNote">
       <div className="head">
-        <h5 className="icon">icon</h5>
-        <h5>Note</h5>
+        <h3 className="icon">{data.icon && <CiStickyNote />}</h3>
+        <h3>{data.title}</h3>
       </div>
-      <div className="footer"></div>
+      <p className="para">{data.text}</p>
+      {data.bottom && (
+        <div className="footer" style={{ backgroundColor: data.noteColor }}>
+          <h4>{data.day}</h4>
+          <h4>{stars}</h4>
+        </div>
+      )}
     </div>
   );
 }
