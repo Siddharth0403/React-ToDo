@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useRef } from "react";
 import Note from "./Note";
 
 function Background() {
+  const ref = useRef();
   const data = [
     {
       icon: true,
@@ -33,16 +34,17 @@ function Background() {
   ];
   return (
     <>
-      <div className="bg">
+      <div ref={ref} className="bg">
         <h1
           className="
       bgText"
         >
           Docs
         </h1>
+
         <div className="alignNotes">
           {data.map((item, index) => (
-            <Note data={item} />
+            <Note data={item} anyVariable={ref} />
           ))}
         </div>
       </div>
